@@ -1,0 +1,33 @@
+[project]
+name = "model-thinking-backend"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=2.4.0",
+    "fastapi>=0.162.0",
+    "httpx>=0.28.1",
+    "networkx>=3.7",
+    "numpy>=2.5.4",
+    "psycopg[binary]>=3.3.7",
+    "pydantic>=2.14.2",
+    "pyjwt[crypto]>=2.15.1",
+    "scipy>=1.18.1",
+    "sqlalchemy>=2.1.8",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["live: calls the real Anthropic API (needs ANTHROPIC_API_KEY); run with -m live"]
+addopts = "-m 'not live'"
+
+[tool.ruff]
+line-length = 120

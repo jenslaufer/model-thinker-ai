@@ -1,0 +1,36 @@
+{
+  "about": "Fictional extension growth case. Expected conclusions: no model but Markov reaches 1,000 paying users; Markov differs because of the free-to-paying rate.",
+  "problem": {
+    "description": "Chrome extension with a free tier and a paid plan at 5 EUR/month. Currently 4,000 installs and 120 paying users. Each month about 8% of payers cancel.",
+    "objective": "Reach 1,000 paying users", "time_horizon": "12 months", "actors": ["Me", "Users", "Chrome Web Store"],
+    "target_quantity": "paying users", "target_value": 1000
+  },
+  "overrides": {
+    "linear": {"data_x": [1, 2, 3, 4, 5, 6], "data_y": [60, 72, 85, 94, 108, 120], "horizon": 12},
+    "random_walk": {"start": 120, "steps": 12, "threshold": 50},
+    "system_dynamics": {"initial_stock": 120, "horizon": 12, "external_inflow": 5},
+    "markov": {"states": ["Free", "Paying", "Churned"], "initial": [0.97, 0.03, 0.0], "steps": 12, "target_state": 1, "population": 4000}
+  },
+  "setup": {
+    "frame": {"quantity": "paying users", "kind": "reach_target", "target": 1000, "horizon": "12 months", "origin": "user_input"},
+    "choices": [
+      {"key": "linear", "instance": "linear", "reason": "Six months of paying users show a trend.", "goal_metric": "forecast"},
+      {"key": "random_walk", "instance": "random_walk", "reason": "Monthly growth is noisy.", "goal_metric": "mean_final"},
+      {"key": "system_dynamics", "instance": "system_dynamics", "reason": "Growth feeds on itself while 8% churn drains it.", "goal_metric": "final_stock"},
+      {"key": "markov", "instance": "markov", "reason": "Users move between free, paying and churned.", "goal_metric": "final_target_count"},
+      {"key": "bandit", "instance": "bandit", "reason": "Three candidate prices to test.", "goal_metric": null}
+    ],
+    "uncovered": ["Seasonality of installs"],
+    "estimates": {
+      "random_walk": {"drift": {"value": 10, "rationale": "about +10 paying users per month in the last six months", "confidence": "medium"},
+                      "volatility": {"value": 15, "rationale": "typical month-to-month noise for a small tool", "confidence": "low"}},
+      "system_dynamics": {"growth_rate": {"value": 0.15, "rationale": "word of mouth for small tools", "confidence": "low"},
+                          "capacity": {"value": 4000, "rationale": "current installs as the reachable base", "confidence": "low"},
+                          "outflow_rate": {"value": 0.08, "rationale": "the text says 8% cancel each month", "confidence": "high"}},
+      "markov": {"transition_matrix": {"value": [[0.95, 0.03, 0.02], [0.0, 0.92, 0.08], [0.0, 0.05, 0.95]], "rationale": "8% churn from the text; free-to-paying 3% is a guess", "confidence": "low"}},
+      "bandit": {"arm_means": {"value": [0.045, 0.03, 0.018], "rationale": "typical conversion falls with price", "confidence": "low"}}
+    }
+  },
+  "expect": {"verdict": "unlikely", "difference_instance": "markov", "difference_mentions": "Free → Paying",
+             "unknown_mentions": "Free → Paying"}
+}

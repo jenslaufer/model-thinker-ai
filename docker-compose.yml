@@ -1,0 +1,33 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: model_thinking
+      POSTGRES_USER: mta
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-mta-dev-only}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mta -d model_thinking"]
+      interval: 5s
+      retries: 10
+  backend:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://mta:${POSTGRES_PASSWORD:-mta-dev-only}@db:5432/model_thinking
+      LLM_PROVIDER: ${LLM_PROVIDER:-heuristic}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      CORS_ORIGINS: http://localhost:${PORT:-8080}
+      # No sign-in by default: one local workspace. Set OIDC_ISSUER_URL and OIDC_CLIENT_ID to require
+      # sign-in through an OIDC provider (README "Sign-in"); the issuer then takes precedence.
+      OIDC_ISSUER_URL: ${OIDC_ISSUER_URL:-}
+      OIDC_CLIENT_ID: ${OIDC_CLIENT_ID:-}
+      AUTH_DEV_MODE: ${AUTH_DEV_MODE:-1}
+    depends_on:
+      db: {condition: service_healthy}
+  frontend:
+    build: ./frontend
+    # Without sign-in the app is reachable from this machine only; BIND=0.0.0.0 opens it to the network.
+    ports: ["${BIND:-127.0.0.1}:${PORT:-8080}:80"]
+    depends_on: [backend]
+volumes:
+  pgdata:

@@ -1,0 +1,22 @@
+{
+  "about": "Retention case. Expected verdict from the analytic stationary distribution of the default churn matrix (pi P = pi): about 45% active, so 700 of 1,000 active customers is out of reach.",
+  "problem": {
+    "description": "Customers churn between active and dormant states. Should we invest in retention?",
+    "objective": "Keep 700 of 1,000 customers active", "time_horizon": "24 months", "actors": ["Company", "Customers"],
+    "target_quantity": "active customers", "target_value": 700
+  },
+  "overrides": {"markov": {"population": 1000}},
+  "setup": {
+    "frame": {"quantity": "active customers", "kind": "reach_target", "target": 700, "horizon": "24 months", "origin": "user_input"},
+    "choices": [
+      {"key": "markov", "instance": "markov", "reason": "Customers switch between states.", "goal_metric": "final_target_count"},
+      {"key": "normal", "instance": "normal", "reason": "Spread of monthly activity.", "goal_metric": null},
+      {"key": "entropy", "instance": "entropy", "reason": "How concentrated the customer base is.", "goal_metric": null}
+    ],
+    "uncovered": [],
+    "estimates": {
+      "markov": {"transition_matrix": {"value": [[0.85, 0.10, 0.05], [0.30, 0.50, 0.20], [0.05, 0.05, 0.90]], "rationale": "typical subscription churn", "confidence": "low"}}
+    }
+  },
+  "expect": {"verdict": "unlikely", "unknown_mentions": "Active"}
+}

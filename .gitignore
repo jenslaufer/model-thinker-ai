@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+.venv/
+.pytest_cache/
+.ruff_cache/
+backend/data/
+*.db
+# Node
+node_modules/
+frontend/dist/
+# Tooling
+.playwright-mcp/
+.env
