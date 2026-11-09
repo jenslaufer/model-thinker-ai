@@ -1,12 +1,14 @@
+<!-- English translation of the original German prompt (master-prompt.de.md), which Claude Code received verbatim. -->
+
 STACK OVERRIDE (from Jens, takes precedence over section 9): Frontend uses Vue 3 + Vite + TypeScript + Tailwind CSS + Vue Router (no Next.js/React/shadcn). Pick Vue-compatible equivalents for React Flow (e.g. Vue Flow). Backend and math stack stay as written.
 
 MASTER PROMPT – MODEL THINKING AI
 
-Entwicklung einer intelligenten Multi-Model-Analyse- und Entscheidungsplattform
+Development of an intelligent multi-model analysis and decision platform
 
-1. ROLLE UND AUFGABE
+1. ROLE AND TASK
 
-Du agierst als interdisziplinäres Entwicklungsteam bestehend aus:
+You act as an interdisciplinary development team made up of:
 
 - Senior Software Architect
 - AI/ML Engineer
@@ -18,43 +20,43 @@ Du agierst als interdisziplinäres Entwicklungsteam bestehend aus:
 - Full-Stack Developer
 - Product Manager
 
-Deine Aufgabe ist die Konzeption, Architektur, Implementierung und iterative Weiterentwicklung einer produktionsfähigen Applikation mit dem Namen:
+Your task is to design, architect, implement and iteratively improve a production-ready application called:
 
 MODEL THINKING AI – Multi-Model Intelligence Framework
 
-Die Applikation basiert konzeptionell auf Scott E. Pages Ansatz aus „The Model Thinker".
+The application is conceptually based on Scott E. Page's approach in "The Model Thinker".
 
-Sie soll Anwender dabei unterstützen, komplexe Probleme durch die systematische Kombination unterschiedlicher Denk- und Rechenmodelle zu analysieren.
+It should help users analyse complex problems by systematically combining different models of thinking and computation.
 
-WICHTIG:
-Implementiere keine reine Chatbot-Oberfläche. Entwickle eine eigenständige Analyseplattform mit strukturierten Daten, mathematischen Modellen, Simulationen, Visualisierungen und nachvollziehbaren Ergebnissen.
+IMPORTANT:
+Do not implement a mere chatbot interface. Build a standalone analysis platform with structured data, mathematical models, simulations, visualisations and traceable results.
 
-2. PRODUKTZIEL
+2. PRODUCT GOAL
 
-Die Applikation muss folgende zentrale Fähigkeit besitzen:
+The application must have the following core capability:
 
-Ein Anwender beschreibt ein Problem in natürlicher Sprache.
+A user describes a problem in natural language.
 
-Das System:
+The system:
 
-1. Analysiert die Fragestellung.
-2. Identifiziert das zugrunde liegende Problem.
-3. Zerlegt es in relevante Einflussfaktoren.
-4. Erkennt Akteure, Variablen und Abhängigkeiten.
-5. Wählt geeignete mathematische und konzeptionelle Modelle.
-6. Erstellt mehrere unabhängige Modellperspektiven.
-7. Berechnet Ergebnisse, sofern ausreichende Daten vorliegen.
-8. Vergleicht die Ergebnisse.
-9. Entwickelt alternative Szenarien.
-10. Generiert nachvollziehbare Handlungsempfehlungen.
+1. Analyses the question.
+2. Identifies the underlying problem.
+3. Breaks it down into relevant influencing factors.
+4. Recognises actors, variables and dependencies.
+5. Selects suitable mathematical and conceptual models.
+6. Builds several independent model perspectives.
+7. Computes results where sufficient data is available.
+8. Compares the results.
+9. Develops alternative scenarios.
+10. Generates traceable recommendations for action.
 
-Das Framework muss unterschiedliche und gegebenenfalls widersprüchliche Perspektiven berücksichtigen.
+The framework must take different and possibly contradictory perspectives into account.
 
-3. MODELLBIBLIOTHEK
+3. MODEL LIBRARY
 
-Implementiere eine erweiterbare Modellbibliothek mit folgenden 24 Modellfamilien:
+Implement an extensible model library with the following 24 model families:
 
-A. Verteilungen und mathematische Modelle
+A. Distributions and mathematical models
 
 1. Normal Distribution
 2. Power Law / Long Tail
@@ -62,7 +64,7 @@ A. Verteilungen und mathematische Modelle
 4. Concavity and Convexity
 5. Value and Power Models
 
-B. Netzwerke und Informationsmodelle
+B. Networks and information models
 
 6. Network Models
 7. Broadcast, Diffusion and Contagion Models
@@ -72,7 +74,7 @@ B. Netzwerke und Informationsmodelle
 11. Local Interaction Models
 12. Lyapunov and Equilibrium Models
 
-C. Dynamische und strategische Modelle
+C. Dynamic and strategic models
 
 13. Markov Models
 14. System Dynamics
@@ -87,86 +89,86 @@ C. Dynamische und strategische Modelle
 23. Multi-Armed Bandit Models
 24. Rugged Landscape Models
 
-Jedes Modell erhält ein eigenes Modul mit:
+Each model gets its own module with:
 
-- Modellbeschreibung
-- mathematischer Definition
-- Eingabeparametern
-- Voraussetzungen
-- Modellannahmen
-- Berechnungslogik
-- Ergebnissen
-- Visualisierungen
-- Anwendungsbeispielen
-- Grenzen und Risiken
+- model description
+- mathematical definition
+- input parameters
+- prerequisites
+- model assumptions
+- calculation logic
+- results
+- visualisations
+- application examples
+- limits and risks
 
-Die mathematischen Implementierungen müssen unabhängig von der KI ausgeführt werden.
+The mathematical implementations must run independently of the AI.
 
-Die KI darf Modelle auswählen und parametrisieren, aber keine Berechnungsergebnisse erfinden.
+The AI may select and parameterise models, but must not invent calculation results.
 
-4. INTELLIGENTE MODELLAUSWAHL
+4. INTELLIGENT MODEL SELECTION
 
-Entwickle eine Model Selection Engine.
+Build a Model Selection Engine.
 
-Sie muss anhand der Problemstellung entscheiden:
+Based on the problem, it must decide:
 
-- Welche Modelle sind relevant?
-- Welche Modelle ergänzen sich?
-- Welche Modelle liefern unterschiedliche Perspektiven?
-- Welche Modelle sind ungeeignet?
-- Welche zusätzlichen Daten werden benötigt?
+- Which models are relevant?
+- Which models complement each other?
+- Which models provide different perspectives?
+- Which models are unsuitable?
+- What additional data is needed?
 
-Die Modellauswahl erfolgt anhand folgender Kriterien:
+Models are selected by the following criteria:
 
-1. Problemtyp
-2. Systemkomplexität
-3. Verfügbare Daten
-4. Anzahl der Akteure
-5. Zeitliche Dynamik
-6. Unsicherheit
-7. Wechselwirkungen
-8. Entscheidungsrelevanz
+1. Problem type
+2. System complexity
+3. Available data
+4. Number of actors
+5. Temporal dynamics
+6. Uncertainty
+7. Interactions
+8. Decision relevance
 
-Erzeuge einen Model Fit Score zwischen 0 und 100.
+Produce a Model Fit Score between 0 and 100.
 
-Dieser Score ist als transparente interne Heuristik zu verstehen und nicht als statistisch validierte Gütewahrscheinlichkeit.
+This score is a transparent internal heuristic, not a statistically validated probability of fit.
 
-Begründe jede Modellauswahl.
+Justify every model choice.
 
 5. MULTI-MODEL ORCHESTRATION ENGINE
 
-Entwickle eine Engine, die mehrere Modelle parallel oder sequenziell ausführen kann.
+Build an engine that can run several models in parallel or in sequence.
 
-Die Engine muss:
+The engine must:
 
-- Modellabhängigkeiten erkennen.
-- Gemeinsame Eingabeparameter verwalten.
-- Unterschiedliche Modellannahmen berücksichtigen.
-- Ergebnisse standardisiert speichern.
-- Widersprüche zwischen Modellen identifizieren.
-- Sensitivitäten vergleichen.
-- Modellgrenzen transparent darstellen.
+- Detect model dependencies.
+- Manage shared input parameters.
+- Respect differing model assumptions.
+- Store results in a standard format.
+- Identify contradictions between models.
+- Compare sensitivities.
+- Show model limits transparently.
 
-Erzeuge eine gemeinsame Ergebnisstruktur:
+Create a shared result structure:
 
-- Problemdefinition
-- Modellname
-- Modellversion
-- Eingabeparameter
-- Annahmen
-- Berechnungsergebnisse
-- Unsicherheitsindikatoren
-- Szenarien
-- Interpretation
-- Handlungsempfehlungen
+- problem definition
+- model name
+- model version
+- input parameters
+- assumptions
+- calculation results
+- uncertainty indicators
+- scenarios
+- interpretation
+- recommendations for action
 
-Vermeide eine künstliche Zusammenführung inkompatibler Modellresultate.
+Avoid artificially merging incompatible model results.
 
 6. SCENARIO ENGINE
 
-Implementiere eine Szenario-Engine.
+Implement a scenario engine.
 
-Mindestens folgende Szenarien müssen unterstützt werden:
+At least the following scenarios must be supported:
 
 - Baseline Scenario
 - Best Case
@@ -175,46 +177,46 @@ Mindestens folgende Szenarien müssen unterstützt werden:
 - Stress Scenario
 - What-if Scenario
 
-Anwender müssen Einflussparameter verändern können.
+Users must be able to change influencing parameters.
 
-Das System berechnet anschließend die Auswirkungen auf die jeweiligen Modelle.
+The system then computes the effects on the respective models.
 
-Implementiere außerdem:
+Also implement:
 
-- Sensitivitätsanalysen
-- Parametervergleiche
-- Monte-Carlo-Simulationen, sofern sinnvoll
-- Wahrscheinlichkeitsverteilungen
-- Unsicherheitsintervalle, sofern methodisch begründbar
+- sensitivity analyses
+- parameter comparisons
+- Monte Carlo simulations where useful
+- probability distributions
+- uncertainty intervals where methodologically justified
 
-Unterscheide konsequent zwischen berechneten Werten, Annahmen und KI-generierten Interpretationen.
+Consistently distinguish between computed values, assumptions and AI-generated interpretations.
 
 7. KNOWLEDGE GRAPH
 
-Implementiere einen Knowledge Graph, der folgende Elemente miteinander verbindet:
+Implement a knowledge graph that connects the following elements:
 
-- Probleme
-- Akteure
-- Variablen
-- Einflussfaktoren
-- Modelle
-- Hypothesen
-- Datenquellen
-- Ergebnisse
-- Szenarien
-- Entscheidungen
+- problems
+- actors
+- variables
+- influencing factors
+- models
+- hypotheses
+- data sources
+- results
+- scenarios
+- decisions
 
-Der Graph soll Zusammenhänge visualisieren.
+The graph should visualise relationships.
 
-Er muss insbesondere Ursache-Wirkungs-Beziehungen und Rückkopplungen darstellen können.
+In particular, it must be able to show cause-and-effect relationships and feedback loops.
 
-Korrelationen dürfen nicht automatisch als kausale Beziehungen interpretiert werden.
+Correlations must not automatically be interpreted as causal relationships.
 
-8. BENUTZEROBERFLÄCHE
+8. USER INTERFACE
 
-Entwickle eine moderne, professionelle und intuitive Benutzeroberfläche.
+Build a modern, professional and intuitive user interface.
 
-Hauptnavigation:
+Main navigation:
 
 1. Dashboard
 2. New Analysis
@@ -231,71 +233,71 @@ Hauptnavigation:
 
 DASHBOARD:
 
-Zeige:
+Show:
 
-- Aktive Analysen
-- Gespeicherte Projekte
-- Verwendete Modelle
-- Letzte Simulationen
-- Wichtigste Erkenntnisse
-- Offene Entscheidungen
+- active analyses
+- saved projects
+- models used
+- recent simulations
+- key insights
+- open decisions
 
 NEW ANALYSIS:
 
-Ermögliche die Eingabe einer Problemstellung in natürlicher Sprache.
+Allow entering a problem in natural language.
 
-Ergänze strukturierte Angaben zu:
+Add structured fields for:
 
-- Zielsetzung
-- Zeithorizont
-- Systemgrenzen
-- verfügbaren Daten
-- relevanten Akteuren
-- Entscheidungsspielraum
+- objective
+- time horizon
+- system boundaries
+- available data
+- relevant actors
+- scope for decisions
 
 MODEL LIBRARY:
 
-Jedes Modell erhält eine eigene Detailseite mit:
+Each model gets its own detail page with:
 
-- Erklärung
-- mathematischer Grundlage
-- Visualisierung
-- Eingabeparametern
-- Beispielen
-- Anwendungsfällen
+- explanation
+- mathematical basis
+- visualisation
+- input parameters
+- examples
+- use cases
 
 MULTI-MODEL ANALYSIS:
 
-Zeige die ausgewählten Modelle nebeneinander.
+Show the selected models side by side.
 
-Vergleiche ihre:
+Compare their:
 
-- Ergebnisse
-- Annahmen
-- Prognosen
-- Unsicherheiten
-- Handlungsempfehlungen
+- results
+- assumptions
+- forecasts
+- uncertainties
+- recommendations for action
 
 SCENARIO LAB:
 
-Biete interaktive Parameterregler und Szenariovergleiche.
+Provide interactive parameter sliders and scenario comparisons.
 
 DECISION CENTER:
 
-Erstelle priorisierte Handlungsempfehlungen mit:
+Produce prioritised recommendations for action with:
 
-- erwarteter Wirkung
-- Voraussetzungen
-- Risiken
-- Unsicherheit
-- Zeithorizont
-- erforderlichen Maßnahmen
+- expected impact
+- prerequisites
+- risks
+- uncertainty
+- time horizon
+- required measures
 
-9. TECHNISCHE ARCHITEKTUR
+9. TECHNICAL ARCHITECTURE
 
-Verwende eine modulare und skalierbare Architektur.
+Use a modular and scalable architecture.
 
-Bevorzugter Technologie-Stack:
+Preferred technology stack:
 
 Frontend:
 
@@ -305,7 +307,7 @@ Frontend:
 - Tailwind CSS
 - shadcn/ui
 
-(Siehe STACK OVERRIDE oben: Vue 3 statt Next.js/React.)
+(See STACK OVERRIDE above: Vue 3 instead of Next.js/React.)
 
 Backend:
 
@@ -313,7 +315,7 @@ Backend:
 - FastAPI
 - Pydantic
 
-Mathematische Berechnungen:
+Mathematical computation:
 
 - NumPy
 - SciPy
@@ -322,30 +324,30 @@ Mathematische Berechnungen:
 - SimPy
 - scikit-learn
 
-Datenhaltung:
+Data storage:
 
 - PostgreSQL
-- optional pgvector
-- Redis für Caching und Hintergrundprozesse
+- optionally pgvector
+- Redis for caching and background processes
 
-Visualisierung:
+Visualisation:
 
 - Plotly
 - React Flow
 - D3.js
 
-KI-Integration:
+AI integration:
 
-- austauschbare LLM-Schnittstelle
-- strukturierte JSON-Ausgaben
-- Tool Calling
-- getrennte KI-Orchestrierung und Berechnungslogik
+- interchangeable LLM interface
+- structured JSON outputs
+- tool calling
+- AI orchestration separated from calculation logic
 
-Die Architektur muss eine spätere Erweiterung um weitere Modelle ermöglichen.
+The architecture must allow adding further models later.
 
-10. DATENMODELL
+10. DATA MODEL
 
-Entwickle mindestens folgende Datenbankentitäten:
+Build at least the following database entities:
 
 - User
 - Workspace
@@ -366,158 +368,158 @@ Entwickle mindestens folgende Datenbankentitäten:
 - Recommendation
 - Report
 
-Implementiere Beziehungen, Versionierung und nachvollziehbare Speicherung der Analysehistorie.
+Implement relationships, versioning and traceable storage of the analysis history.
 
-11. KI-ANALYSEPROZESS
+11. AI ANALYSIS PROCESS
 
-Die KI muss einem strukturierten Analyseprotokoll folgen:
+The AI must follow a structured analysis protocol:
 
 PHASE 1 – UNDERSTAND
-Problemstellung verstehen und präzisieren.
+Understand and sharpen the problem.
 
 PHASE 2 – DECOMPOSE
-Das Problem in Teilprobleme, Variablen und Akteure zerlegen.
+Break the problem down into sub-problems, variables and actors.
 
 PHASE 3 – SELECT
-Geeignete Modelle identifizieren und begründen.
+Identify suitable models and justify the choice.
 
 PHASE 4 – PARAMETERIZE
-Erforderliche Parameter und Daten bestimmen.
+Determine the required parameters and data.
 
 PHASE 5 – EXECUTE
-Mathematische Modelle ausführen.
+Run the mathematical models.
 
 PHASE 6 – COMPARE
-Ergebnisse und Modellperspektiven vergleichen.
+Compare results and model perspectives.
 
 PHASE 7 – SIMULATE
-Szenarien und alternative Entwicklungen berechnen.
+Compute scenarios and alternative developments.
 
 PHASE 8 – SYNTHESIZE
-Erkenntnisse aus verschiedenen Modellen integrieren.
+Integrate insights from different models.
 
 PHASE 9 – DECIDE
-Handlungsoptionen und Empfehlungen ableiten.
+Derive options and recommendations for action.
 
 PHASE 10 – EVALUATE
-Ergebnisse anhand neuer Daten überprüfen und Modelle verbessern.
+Check results against new data and improve the models.
 
-12. QUALITÄT UND VALIDIERUNG
+12. QUALITY AND VALIDATION
 
-Jedes Modell benötigt:
+Every model needs:
 
-- Unit Tests
-- Integrationstests
-- mathematische Plausibilitätsprüfungen
-- Grenzwerttests
-- reproduzierbare Simulationen
-- nachvollziehbare Berechnungsprotokolle
+- unit tests
+- integration tests
+- mathematical plausibility checks
+- boundary-value tests
+- reproducible simulations
+- traceable calculation logs
 
-Nutze bekannte Testfälle und analytische Referenzlösungen.
+Use known test cases and analytic reference solutions.
 
-Kennzeichne unzureichende Daten und nicht validierte Modellannahmen.
+Flag insufficient data and unvalidated model assumptions.
 
-Die Plattform darf keine Scheingenauigkeit erzeugen.
+The platform must not create false precision.
 
-13. SICHERHEIT
+13. SECURITY
 
-Implementiere:
+Implement:
 
-- sichere Authentifizierung
-- rollenbasierte Zugriffsrechte
-- Datenverschlüsselung
-- sichere API-Kommunikation
-- Audit Logs
-- Schutz vor Prompt Injection
-- Validierung sämtlicher Eingaben
-- getrennte Speicherung unterschiedlicher Mandanten
+- secure authentication
+- role-based access rights
+- data encryption
+- secure API communication
+- audit logs
+- protection against prompt injection
+- validation of all inputs
+- separate storage for different tenants
 
-14. ENTWICKLUNGSSTRATEGIE
+14. DEVELOPMENT STRATEGY
 
-Implementiere das Projekt inkrementell.
+Implement the project incrementally.
 
 PHASE 1 – FOUNDATION
-- Systemarchitektur
-- Datenmodell
-- Benutzeroberfläche
-- Model Library
-- erste fünf Modelle
+- system architecture
+- data model
+- user interface
+- model library
+- first five models
 
 PHASE 2 – ANALYTICS
-- vollständige Modellbibliothek
+- complete model library
 - Model Selection Engine
-- Multi-Model Orchestration
+- multi-model orchestration
 
 PHASE 3 – SIMULATION
 - Scenario Engine
-- Monte-Carlo-Simulation
-- Sensitivitätsanalyse
-- interaktive Visualisierung
+- Monte Carlo simulation
+- sensitivity analysis
+- interactive visualisation
 
 PHASE 4 – INTELLIGENCE
-- KI-Analyse
-- Knowledge Graph
+- AI analysis
+- knowledge graph
 - Decision Center
-- automatisierte Reports
+- automated reports
 
 PHASE 5 – PRODUCTION
-- Sicherheit
-- Performance
-- Monitoring
-- automatisierte Tests
-- Deployment
+- security
+- performance
+- monitoring
+- automated tests
+- deployment
 
-15. ARBEITSWEISE DES CODING-AGENTEN
+15. HOW THE CODING AGENT WORKS
 
-Arbeite nicht nur konzeptionell.
+Do not work only conceptually.
 
-Erstelle tatsächlich ausführbaren und getesteten Programmcode.
+Produce actually executable and tested code.
 
-Beginne mit:
+Start with:
 
-1. Architekturentscheidung
-2. Systemstruktur
-3. Datenbankschema
-4. API-Design
-5. UI-Konzept
-6. Implementierungsplan
+1. architecture decision
+2. system structure
+3. database schema
+4. API design
+5. UI concept
+6. implementation plan
 
-Danach implementiere die Applikation schrittweise.
+Then implement the application step by step.
 
-Nach jeder Entwicklungsphase:
+After each development phase:
 
-- Code ausführen
-- Tests durchführen
-- Fehler beheben
-- Dokumentation aktualisieren
-- Implementierungsstatus festhalten
+- run the code
+- run the tests
+- fix bugs
+- update the documentation
+- record the implementation status
 
-Vermeide nicht funktionsfähige Platzhalter und simulierte Ergebnisse, die als echte Modellberechnungen ausgegeben werden.
+Avoid non-functional placeholders and simulated results presented as real model calculations.
 
-Wenn eine Funktion noch nicht implementiert ist, kennzeichne sie transparent.
+If a feature is not implemented yet, flag it transparently.
 
 16. DEFINITION OF DONE
 
-Die Applikation gilt erst dann als funktionsfähig, wenn:
+The application only counts as functional when:
 
-- Eine Problemstellung eingegeben werden kann.
-- Das System das Problem strukturiert.
-- Modelle automatisch vorgeschlagen werden.
-- Mindestens fünf Modelle tatsächlich mathematisch ausgeführt werden.
-- Mehrere Modellergebnisse verglichen werden.
-- Parameter verändert werden können.
-- Szenarien berechnet werden.
-- Ergebnisse visualisiert werden.
-- Handlungsempfehlungen nachvollziehbar abgeleitet werden.
-- Analysen gespeichert und erneut geöffnet werden können.
-- Automatisierte Tests erfolgreich sind.
+- A problem can be entered.
+- The system structures the problem.
+- Models are proposed automatically.
+- At least five models are actually executed mathematically.
+- Several model results are compared.
+- Parameters can be changed.
+- Scenarios are computed.
+- Results are visualised.
+- Recommendations for action are derived traceably.
+- Analyses can be saved and reopened.
+- Automated tests pass.
 
-ABSCHLIESSENDE LEITLINIE
+FINAL GUIDELINE
 
-Entwickle keine Anwendung, die lediglich vorhandene Informationen zusammenfasst.
+Do not build an application that merely summarises existing information.
 
-Entwickle ein echtes Multi-Model Decision Intelligence System.
+Build a real multi-model decision intelligence system.
 
-Der zentrale Mehrwert ist die Fähigkeit, komplexe Probleme aus mehreren mathematisch unterschiedlichen Perspektiven zu untersuchen, die Ergebnisse kritisch zu vergleichen und daraus bessere Entscheidungen abzuleiten.
+The core value is the ability to examine complex problems from several mathematically different perspectives, compare the results critically and derive better decisions from them.
 
-Beginne mit der Architektur und einem funktionsfähigen MVP. Liefere nach jeder Entwicklungsphase lauffähige Ergebnisse statt lediglich weiterer Planung.
+Start with the architecture and a working MVP. Deliver runnable results after each development phase instead of just more planning.

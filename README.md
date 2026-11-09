@@ -12,7 +12,8 @@ from a deterministic, tested model implementation, and the UI labels each statem
 ## How it was built
 
 After reading the book, I wrote one prompt and let [Claude Code](https://claude.com/claude-code) build the app from
-it: [`docs/master-prompt.md`](docs/master-prompt.md) (German, verbatim). Later sessions added the question-first
+it: [`docs/master-prompt.md`](docs/master-prompt.md) (English translation; the German original Claude Code
+received is [`docs/master-prompt.de.md`](docs/master-prompt.de.md)). Later sessions added the question-first
 Answer page and the AI setup with transparent estimates. It is an experiment, not a validated product: with
 questions that come without data, the models compute assumptions precisely, and the answers can look more certain
 than they are.
