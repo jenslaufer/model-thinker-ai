@@ -22,8 +22,8 @@ than they are.
 You need [Docker](https://docs.docker.com/get-docker/) with Docker Compose. Nothing else.
 
 ```bash
-git clone <this repository> model-thinking-ai
-cd model-thinking-ai
+git clone https://github.com/jenslaufer/model-thinker-ai.git
+cd model-thinker-ai
 docker compose up --build -d
 ```
 
